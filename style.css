@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    background: #001122;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #0066ff;
+    box-shadow: 0 0 20px #0066ff;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffff00;
+    padding: 0 10px;
+}
+
+.score, .lives {
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #0066ff;
+}
+
+#gameCanvas {
+    border: 3px solid #0066ff;
+    background: #000;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.game-controls {
+    margin-top: 20px;
+}
+
+.game-controls p {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 16px;
+}
+
+button {
+    background: #ffff00;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.game-message.win {
+    color: #00ff00;
+}
+
+.game-message.lose {
+    color: #ff0000;
+}
+
+.game-message.info {
+    color: #ffff00;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .score, .lives {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
